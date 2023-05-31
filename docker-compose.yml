@@ -1,0 +1,36 @@
+version: '3.9'
+services:
+  database:
+    image: postgres
+    container_name: postgres_container
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - ${DB_PORT}:${DB_PORT_INT}
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - dyor-account-service
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PG_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PG_PASSWORD}
+    ports:
+      - ${PG_PORT}:${PG_PORT_INT}
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+
+volumes:
+  pg_data:
+    driver: local
+  pgadmin-data:
+
+networks:
+  backend-service:

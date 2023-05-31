@@ -1,0 +1,43 @@
+{
+  "env": {
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": 2019
+  },
+  "plugins": [
+    "@darraghor/nestjs-typed",
+    "@typescript-eslint",
+    "unicorn",
+    "jest"
+  ],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript/base",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:sonarjs/recommended",
+    "plugin:security/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@darraghor/nestjs-typed/recommended",
+    "plugin:@typescript-eslint/eslint-recommended"
+  ],
+  "rules": {},
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".ts"
+        ]
+      }
+    }
+  }
+}
