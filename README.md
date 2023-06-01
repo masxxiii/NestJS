@@ -43,7 +43,6 @@ the required containers up and running, the steps are carefully explained below.
    NODE_ENV=development
    
    # SERVER
-   NAME=Backend_Service
    PORT=3000
    HOST=localhost
    PREFIX=api
@@ -53,14 +52,13 @@ the required containers up and running, the steps are carefully explained below.
    DB_PORT=5433
    DB_PORT_INT=5432
    DB_USER=user
-   DB_PASSWORD=user
-   DBLINK=
+   DB_PASSWORD=12345
    
    # PG ADMIN
    PG_PORT=8080
    PG_PORT_INT=80
    PG_EMAIL=user@pgadmin.com
-   PG_PASSWORD=user
+   PG_PASSWORD=12345
    
    # JWT
    JWT_ACCESS=924F55427298A6AF1988F3877BD5E

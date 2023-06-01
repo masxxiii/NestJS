@@ -27,7 +27,10 @@
     "plugin:@darraghor/nestjs-typed/recommended",
     "plugin:@typescript-eslint/eslint-recommended"
   ],
-  "rules": {},
+  "rules": {
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/indent": ["error", 4]
+  },
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
